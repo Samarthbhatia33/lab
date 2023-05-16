@@ -1,0 +1,73 @@
+
+body{
+  background-color: black;
+}
+.master{
+  margin-top: 200px;
+}
+.yuh{
+  font-family: serif;
+  font-size: 2.5vw;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+.yuhtwo{
+  font-family: serif;
+  font-size: 2vw;
+  text-align: center;
+  color: #ffffff;
+  opacity: 20%;
+  margin-top: 30px;
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
+  text-decoration: none;
+  margin-top: 0px;
+}
+
+.title-word-1 {
+  --color-1: #ff0000;
+  --color-2: #000000;
+  --color-3: #000000;
+}
+
+.title-word-2 {
+  --color-1: #000000;
+  --color-2: #0400ff;
+  --color-3: #000000;
+}
+
+.title-word-3 {
+  --color-1: #000000;
+  --color-2: #000000;
+  --color-3: #34a400;
+}
+.title-word-4 {
+  --color-1: #e90000;
+  --color-2: #000000;
+  --color-3: #34a400;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 25vh;
+  margin-top: 0;
+}
+
+.title {
+  font-family: serif;
+  font-weight: 400;
+  font-size: 4.5vw;
+}
