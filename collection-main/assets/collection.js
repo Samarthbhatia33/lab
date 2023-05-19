@@ -11,8 +11,8 @@ const renderItems = (collection) => {
 
 		// You can make each element inside of that…
 		const itemTitle = document.createElement('h2') // Make an `h2`
-		itemTitle.innerHTML = item.title // Put the JSON title inside
-		listItem.appendChild(itemTitle) // And add it to the `li`!
+		itemTitle.innerHTML = item.Incident_Address // Put the JSON title inside
+		listItem.appendChild(itemIncident_Address) // And add it to the `li`!
 
 		const itemImage = document.createElement('img') // And an image
 		itemImage.src = item.posterImage // Set the `src` attribute from the JSON
