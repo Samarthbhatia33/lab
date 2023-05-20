@@ -1,0 +1,35 @@
+*{
+  font-family: 'Space Mono', monospace;
+}
+.smiley{
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+.smiley:hover{
+  transform: rotate(0deg) scale(1.5);
+  
+}
+.smileytwo{
+  transform: rotate(0deg);
+  transition: 0.6s ease-in-out;
+}
+.smileytwo:hover{
+  transform: rotate(-320deg)
+  }
+
+
+  .yellow{
+    color: yellow;
+  }
+  .red{
+    color: red;
+  }
+  .blue{
+    color: blue;
+  }
+  .green{
+    color: green;
+  }
