@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #F5F5F5;
+      font-family: Arial, sans-serif;
+    }
+
+    .weather-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .weather-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .weather-icon {
+      margin-right: 10px;
+    }
+
+    .temperature {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .description {
+      font-size: 24px;
+      color: #666666;
+    }
+
+    .temperature-graph {
+      background-color: #ECECEC;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .temperature-progress {
+      height: 100%;
+      transition: width 0.5s ease;
+    }
+  </style>
+  <script>
+    // This is a mock function to simulate fetching weather data from an API
+    function getWeatherData() {
+      return {
+        temperature: 10,
+        description: "Cloudy",
+        humidity: 80
+      };
+    }
+
+    function displayWeatherData() {
+      var weatherData = getWeatherData();
+
+      var temperatureElement = document.getElementById("temperature");
+      var descriptionElement = document.getElementById("description");
+      var progressElement = document.getElementById("progress");
+
+      temperatureElement.textContent = weatherData.temperature + "°C";
+      descriptionElement.textContent = weatherData.description;
+
+      // Adjust the width of the progress bar based on the temperature
+      progressElement.style.width = weatherData.temperature + "%";
+    }
+  </script>
+</head>
+<body onload="displayWeatherData()">
+  <div class="weather-container">
+    <div class="weather-info">
+      <img class="weather-icon" src="weather-icon.png" alt="Weather Icon">
+      <div>
+        <div id="temperature" class="temperature"></div>
+        <div id="description" class="description"></div>
+      </div>
+    </div>
+    <div class="temperature-graph">
+      <div id="progress" class="temperature-progress"></div>
+    </div>
+  </div>
+</body>
+</html>

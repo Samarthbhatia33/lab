@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .noun {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function changeText() {
+      var nouns = document.getElementsByClassName("noun");
+      var verb = "jumped";
+      var events = ["the sun exploded", "i love pasta", "the scaffolding of new york is iconic"];
+
+      // Change all instances of the noun
+      for (var i = 0; i < nouns.length; i++) {
+        nouns[i].textContent = "tree";
+      }
+
+      // Add a verb
+      var verbElement = document.createElement("span");
+      verbElement.textContent = verb + " ";
+      document.getElementById("verbContainer").appendChild(verbElement);
+
+      // Select a random event from the array
+      var randomEventIndex = Math.floor(Math.random() * events.length);
+      var randomEvent = events[randomEventIndex];
+
+      // Add the random event
+      var eventElement = document.createElement("span");
+      eventElement.textContent = randomEvent;
+      document.getElementById("eventContainer").appendChild(eventElement);
+    }
+  </script>
+</head>
+<body>
+  <h1>Text Manipulation</h1>
+  <button onclick="changeText()">Change Text</button>
+  <p>The <span class="noun">sun</span> shines brightly on the <span class="noun">hill</span>.</p>
+
+  <p>The <span class="noun">tree</span> <span id="verbContainer"></span> when <span id="eventContainer"></span>.</p>
+</body>
+</html>
