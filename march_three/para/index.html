@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function addWord() {
+      var paragraph = document.getElementById("myParagraph");
+      var word = document.createElement("span");
+      word.textContent = "word ";
+      paragraph.appendChild(word);
+    }
+  </script>
+</head>
+<body>
+  <h1>Add Word to Paragraph</h1>
+  <button onclick="addWord()">Button</button>
+  <p id="myParagraph" style="font-family: 'Space Mono', monospace;">Hello, </p>
+</body>
+</html>
+

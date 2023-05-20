@@ -13,10 +13,30 @@
         <link rel = "icon" href = 
         "https://cdn-icons-png.flaticon.com/512/3116/3116472.png" 
                 type = "image/x-icon">
+
+                <style>
+                  @media (max-width: 599px) {
+                    body {
+                      background-color: lightblue;
+                    }
+                  }
+              
+                  @media (min-width: 600px) and (max-width: 959px) {
+                    body {
+                      background-color: lightgreen;
+                    }
+                  }
+              
+                  @media (min-width: 960px) {
+                    body {
+                      background-color: lightyellow;
+                    }
+                  }
+                </style>
+
       </head>
     <body>
-      <div> <a href="background_color/index.html"> #1</a> </div>
-      <div> <a href="div/index.html"> #2</a> </div>
-      <div> <a href="para/index.html"> #3</a> </div>
+      <h1>Breakpoints</h1>
+      <p>The background color changes based on the screen size.</p>
     </body>
 </html>

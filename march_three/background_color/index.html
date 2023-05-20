@@ -13,10 +13,26 @@
         <link rel = "icon" href = 
         "https://cdn-icons-png.flaticon.com/512/3116/3116472.png" 
                 type = "image/x-icon">
+                <style>
+                  body {
+                    transition: background-color 0.3s ease;
+                  }
+                </style>
+                <script>
+                  function toggleBackgroundColor() {
+                    var body = document.body;
+                    var currentColor = body.style.backgroundColor;
+              
+                    if (currentColor === "" || currentColor === "rgb(200, 0, 0)") {
+                      body.style.backgroundColor = "rgb(0, 200, 0)";
+                    } else {
+                      body.style.backgroundColor = "rgb(200, 0, 0)";
+                    }
+                  }
+                </script>
       </head>
     <body>
-      <div> <a href="background_color/index.html"> #1</a> </div>
-      <div> <a href="div/index.html"> #2</a> </div>
-      <div> <a href="para/index.html"> #3</a> </div>
+      <h1>Toggle Background Color</h1>
+      <button onclick="toggleBackgroundColor()">button</button>
     </body>
 </html>

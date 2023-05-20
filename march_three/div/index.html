@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #myDiv {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      transition: all 0.3s ease;
+      font-family: 'Space Mono', monospace;
+
+    }
+  </style>
+  <script>
+    function changeDiv() {
+      var div = document.getElementById("myDiv");
+      var currentColor = div.style.backgroundColor;
+      var currentSize = parseInt(div.style.width);
+
+      if (currentColor === "blue") {
+        div.style.backgroundColor = "red";
+        div.style.width = (currentSize * 1.5) + "px";
+        div.style.height = (currentSize * 1.5) + "px";
+      } else {
+        div.style.backgroundColor = "blue";
+        div.style.width = "200px";
+        div.style.height = "200px";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Change Size and Color of a Div</h1>
+  <button onclick="changeDiv()">Button</button>
+  <div id="myDiv"></div>
+</body>
+</html>
+
+
+
